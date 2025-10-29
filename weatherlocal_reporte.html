@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherLocal Copiapó - Reporte Meteorológico</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 8px; overflow: hidden; }
+        header { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { font-size: 1.1rem; opacity: 0.95; }
+        main { padding: 30px; }
+        section { margin-bottom: 30px; }
+        h2 { color: #667eea; border-bottom: 3px solid #667eea; padding-bottom: 10px; margin-bottom: 20px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #667eea; color: white; font-weight: bold; }
+        tr:hover { background-color: #f5f5f5; }
+        .good { color: #28a745; font-weight: bold; }
+        .moderate { color: #ffc107; font-weight: bold; }
+        .bad { color: #dc3545; font-weight: bold; }
+        footer { 
+            background: #333; 
+            color: white; 
+            text-align: center; 
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ WeatherLocal Copiapó</h1>
+            <p class="subtitle">Reporte Meteorológico Hiperlocalizado - Generado desde Jupyter Notebook</p>
+        </header>
+        <main>
+            <section>
+                <h2>Datos Meteorológicos en Tiempo Real</h2>
+                <p>Información de las 12 estaciones distribuidas en Copiapó y alrededores:</p>
+                
+<table>
+    <tr>
+        <th>Estación</th>
+        <th>Temperatura</th>
+        <th>Humedad</th>
+        <th>Viento</th>
+        <th>Nubosidad</th>
+        <th>ICA (Calidad Aire)</th>
+    </tr>
+    
+    <tr>
+        <td>Copiapó Centro</td>
+        <td>28°C</td>
+        <td>35%</td>
+        <td>15 km/h (NO)</td>
+        <td>Baja (25%)</td>
+        <td class="good">45 (Buena)</td>
+    </tr>
+    
+    <tr>
+        <td>Caldera Puerto</td>
+        <td>22°C</td>
+        <td>65%</td>
+        <td>22 km/h (SO)</td>
+        <td>Alta (75%)</td>
+        <td class="moderate">52 (Moderada)</td>
+    </tr>
+    
+    <tr>
+        <td>Tierra Amarilla</td>
+        <td>26°C</td>
+        <td>40%</td>
+        <td>18 km/h (O)</td>
+        <td>Media (45%)</td>
+        <td class="moderate">68 (Moderada)</td>
+    </tr>
+    
+    <tr>
+        <td>Cerro Empeñada</td>
+        <td>24°C</td>
+        <td>45%</td>
+        <td>25 km/h (NO)</td>
+        <td>Media (50%)</td>
+        <td class="moderate">75 (Moderada)</td>
+    </tr>
+    
+    <tr>
+        <td>Punta de Choros</td>
+        <td>20°C</td>
+        <td>70%</td>
+        <td>28 km/h (SO)</td>
+        <td>Alta (80%)</td>
+        <td class="good">42 (Buena)</td>
+    </tr>
+    
+    <tr>
+        <td>La Higuera</td>
+        <td>30°C</td>
+        <td>32%</td>
+        <td>12 km/h (NE)</td>
+        <td>Baja (20%)</td>
+        <td class="moderate">85 (Mala)</td>
+    </tr>
+    
+    <tr>
+        <td>Nantoco</td>
+        <td>29°C</td>
+        <td>38%</td>
+        <td>16 km/h (NO)</td>
+        <td>Baja (30%)</td>
+        <td class="moderate">55 (Moderada)</td>
+    </tr>
+    
+    <tr>
+        <td>Zona Industrial</td>
+        <td>27°C</td>
+        <td>36%</td>
+        <td>14 km/h (N)</td>
+        <td>Media (40%)</td>
+        <td class="bad">120 (Mala)</td>
+    </tr>
+    
+    <tr>
+        <td>Pajonales</td>
+        <td>25°C</td>
+        <td>42%</td>
+        <td>20 km/h (SO)</td>
+        <td>Alta (60%)</td>
+        <td class="moderate">58 (Moderada)</td>
+    </tr>
+    
+    <tr>
+        <td>Atacama Sur</td>
+        <td>31°C</td>
+        <td>30%</td>
+        <td>10 km/h (E)</td>
+        <td>Muy baja (10%)</td>
+        <td class="moderate">92 (Mala)</td>
+    </tr>
+    
+    <tr>
+        <td>Chañaral</td>
+        <td>23°C</td>
+        <td>55%</td>
+        <td>24 km/h (SO)</td>
+        <td>Media (55%)</td>
+        <td class="good">48 (Buena)</td>
+    </tr>
+    
+    <tr>
+        <td>Los Loros</td>
+        <td>26°C</td>
+        <td>44%</td>
+        <td>17 km/h (O)</td>
+        <td>Alta (65%)</td>
+        <td class="moderate">62 (Moderada)</td>
+    </tr>
+    
+</table>
+
+            </section>
+            <section>
+                <h2>Predicciones de Contaminación (ML)</h2>
+                <p>Basadas en Random Forest con análisis de temperatura, humedad y viento:</p>
+                
+<table>
+    <tr>
+        <th>Estación</th>
+        <th>Predicción</th>
+        <th>Probabilidad</th>
+        <th>Temperatura Pronóstico</th>
+    </tr>
+    
+    <tr>
+        <td>Copiapó Centro</td>
+        <td>✅ NORMAL</td>
+        <td>30.0%</td>
+        <td>30°C</td>
+    </tr>
+    
+    <tr>
+        <td>Caldera Puerto</td>
+        <td>✅ NORMAL</td>
+        <td>0.0%</td>
+        <td>23°C</td>
+    </tr>
+    
+    <tr>
+        <td>Tierra Amarilla</td>
+        <td>✅ NORMAL</td>
+        <td>0.0%</td>
+        <td>27°C</td>
+    </tr>
+    
+    <tr>
+        <td>Cerro Empeñada</td>
+        <td>✅ NORMAL</td>
+        <td>0.0%</td>
+        <td>25°C</td>
+    </tr>
+    
+    <tr>
+        <td>Punta de Choros</td>
+        <td>✅ NORMAL</td>
+        <td>0.0%</td>
+        <td>21°C</td>
+    </tr>
+    
+    <tr>
+        <td>La Higuera</td>
+        <td>✅ NORMAL</td>
+        <td>0.0%</td>
+        <td>31°C</td>
+    </tr>
+    
+    <tr>
+        <td>Nantoco</td>
+        <td>✅ NORMAL</td>
+        <td>10.0%</td>
+        <td>30°C</td>
+    </tr>
+    
+    <tr>
+        <td>Zona Industrial</td>
+        <td>⚠️ RIESGO ALTO</td>
+        <td>70.0%</td>
+        <td>28°C</td>
+    </tr>
+    
+    <tr>
+        <td>Pajonales</td>
+        <td>✅ NORMAL</td>
+        <td>0.0%</td>
+        <td>26°C</td>
+    </tr>
+    
+    <tr>
+        <td>Atacama Sur</td>
+        <td>✅ NORMAL</td>
+        <td>0.0%</td>
+        <td>32°C</td>
+    </tr>
+    
+    <tr>
+        <td>Chañaral</td>
+        <td>✅ NORMAL</td>
+        <td>0.0%</td>
+        <td>24°C</td>
+    </tr>
+    
+    <tr>
+        <td>Los Loros</td>
+        <td>✅ NORMAL</td>
+        <td>0.0%</td>
+        <td>27°C</td>
+    </tr>
+    
+</table>
+
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 WeatherLocal Copiapó | Generado con Python en Jupyter Notebook</p>
+        </footer>
+    </div>
+</body>
+</html>
