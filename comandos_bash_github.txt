@@ -1,0 +1,46 @@
+# ========================================
+# COMANDOS BASH PARA SUBIR A GITHUB
+# Usuario: miguellucero123
+# ========================================
+
+# 1. Verificar estado del repositorio
+git status
+
+# 2. Agregar el repositorio remoto (REEMPLAZA "NOMBRE_REPO" con el nombre real)
+# Ejemplo: git remote add origin https://github.com/miguellucero123/Ejercicios-Bootcamp-DEV.git
+git remote add origin https://github.com/miguellucero123/NOMBRE_REPO.git
+
+# 3. Verificar la rama actual
+git branch --show-current
+
+# 4. Si tu rama es "master" y quieres cambiar a "main":
+git branch -M main
+
+# 5. Subir el código a GitHub
+# Si tu rama es "main":
+git push -u origin main
+
+# Si tu rama es "master":
+git push -u origin master
+
+# ========================================
+# COMANDOS ADICIONALES ÚTILES
+# ========================================
+
+# Ver repositorios remotos configurados
+git remote -v
+
+# Cambiar la URL del remoto (si ya existe)
+git remote set-url origin https://github.com/miguellucero123/NOMBRE_REPO.git
+
+# Ver todas las ramas
+git branch -a
+
+# ========================================
+# NOTA IMPORTANTE
+# ========================================
+# Si GitHub te pide autenticación:
+# - Usa un Personal Access Token (PAT)
+# - O configura SSH keys
+# - O usa GitHub Desktop para facilitar el proceso
+
