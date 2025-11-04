@@ -1,0 +1,21 @@
+INSTRUCCIONES PARA CORREGIR COMMITS EN GIT BASH
+================================================
+
+1. Abre Git Bash (NO PowerShell)
+
+2. Ve al repositorio:
+   cd /c/Users/Alicia_Piero/Documents/Repo_AIEP/Bootcamp_DEV/Ejercicios
+
+3. Ejecuta este comando para corregir todos los commits:
+   git filter-branch -f --msg-filter 'sed "s/AÃ±adir/Añadir/g; s/guÃa/guía/g; s/guÃ­a/guía/g; s/pÃºblico/público/g; s/rÃ¡pida/rápida/g; s/soluciÃ³n/solución/g; s/especÃ­fica/específica/g; s/espaÃ±ol/español/g; s/informaciÃ³n/información/g"' -- --all
+
+4. Espera a que termine (puede tomar unos minutos)
+
+5. Verifica los cambios:
+   git log --oneline -10
+
+6. Si los mensajes se ven bien, haz force push a GitHub:
+   git push --force --all
+
+ADVERTENCIA: El force push reescribirá el historial en GitHub.
+Solo hazlo si es tu repositorio personal o tienes permiso.
